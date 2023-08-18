@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <iostream>
+#include <vector>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
 };
 
 
