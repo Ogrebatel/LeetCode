@@ -1,10 +1,11 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <iostream>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    bool isPalindrome(std::string s);
 };
 
 
