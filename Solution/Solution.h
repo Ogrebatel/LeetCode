@@ -2,6 +2,9 @@
 #define LEETCODE_SOLUTION_H
 
 #include <string>
+#include <vector>
+#include <sstream>
+#include <algorithm>
 
 class Solution {
  public:
