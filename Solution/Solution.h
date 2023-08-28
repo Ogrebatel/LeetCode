@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
+#include <algorithm>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    int minSubArrayLen(int target, std::vector<int>& nums);
 };
 
 
