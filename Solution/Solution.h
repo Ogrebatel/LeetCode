@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
+#include <vector>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    std::string longestCommonPrefix(std::vector<std::string>& strs);
 };
 
 

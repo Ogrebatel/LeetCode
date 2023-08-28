@@ -1,10 +1,16 @@
 #include <gtest/gtest.h>
 #include "Solution.h"
 
-TEST(Test, test_for_test) {
+TEST(Test, Example1) {
     Solution sol;
+    std::vector<std::string> strs = {"flower","flow","flight"};
+    EXPECT_EQ("fl", sol.longestCommonPrefix(strs));
+}
 
-    EXPECT_EQ(4, sol.solution(2, 2));
+TEST(Test, Example2) {
+    Solution sol;
+    std::vector<std::string> strs = {"dog","racecar","car"};
+    EXPECT_EQ("", sol.longestCommonPrefix(strs));
 }
 
 int main() {
