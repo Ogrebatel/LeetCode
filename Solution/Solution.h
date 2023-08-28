@@ -1,10 +1,14 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
+#include <stack>
+#include <sstream>
+#include <iostream>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    int lengthOfLastWord(std::string s);
 };
 
 
