@@ -1,5 +1,6 @@
 #include "Solution.h"
 
-int Solution::solution(int a, int b) {
-    return a + b;
+std::string Solution::reverseWords(std::string s) {
+
+    return {};
 }
