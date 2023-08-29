@@ -1,10 +1,13 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
+#include <map>
+#include <sstream>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    bool wordPattern(std::string pattern, std::string s);
 };
 
 
