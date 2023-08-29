@@ -1,10 +1,14 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
+#include <map>
+#include <iostream>
+#include <set>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    std::vector<int> twoSum(std::vector<int>& nums, int target);
 };
 
 
