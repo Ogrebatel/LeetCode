@@ -1,10 +1,14 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <map>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& strs);
 };
 
 
