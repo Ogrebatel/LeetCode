@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
+#include <map>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    bool isAnagram(std::string s, std::string t);
 };
 
 
