@@ -1,10 +1,13 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <iostream>
+#include <string>
+#include <vector>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    std::vector<std::string> fullJustify(std::vector<std::string>& words, int maxWidth);
 };
 
 
