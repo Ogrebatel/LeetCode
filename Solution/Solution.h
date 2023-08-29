@@ -1,10 +1,17 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
+#include <map>
 
 class Solution {
- public:
-    static int solution(int a, int b);
+public:
+    bool isValidSudoku(std::vector<std::vector<char>> &board);
+
+private:
+    std::map<char, bool> _check;
+
+    void dropChecker();
 };
 
 
