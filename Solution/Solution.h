@@ -1,10 +1,13 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <map>
+#include <set>
+#include <string>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    bool isIsomorphic(std::string s, std::string t);
 };
 
 
