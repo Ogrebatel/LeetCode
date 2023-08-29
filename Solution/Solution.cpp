@@ -26,5 +26,6 @@ bool Solution::wordPattern(std::string pattern, std::string s) {
             equalityOfChar[v[i]] = pattern[i];
         }
     }
+
     return true;
 }
