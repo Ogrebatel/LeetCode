@@ -11,21 +11,20 @@ bool Solution::wordPattern(std::string pattern, std::string s) {
             v.emplace_back(str);
     }
 
-    std::map<char, std::string> equalityS;
-    std::map<std::string, char> equalityT;
-    if (s.size() != v.size()) {
+    std::map<char, std::string> equalityOfPattern;
+    std::map<std::string, char> equalityOfChar;
+    if (pattern.size() != v.size()) {
         return false;
     }
-    for (int i = 0; i < s.size(); ++i) {
-        if (equalityS.find(s[i]) != equalityS.end() || equalityT.find(v[i]) != equalityT.end()) {
-            if (v[i] != equalityS[s[i]] || s[i] != equalityT[v[i]]) {
+    for (int i = 0; i < pattern.size(); ++i) {
+        if (equalityOfPattern.find(pattern[i]) != equalityOfPattern.end() || equalityOfChar.find(v[i]) != equalityOfChar.end()) {
+            if (v[i] != equalityOfPattern[pattern[i]] || pattern[i] != equalityOfChar[v[i]]) {
                 return false;
             }
         } else {
-            equalityS[s[i]] = v[i];
-            equalityT[v[i]] = s[i];
+            equalityOfPattern[pattern[i]] = v[i];
+            equalityOfChar[v[i]] = pattern[i];
         }
     }
     return true;
-    return false;
 }
