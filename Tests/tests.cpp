@@ -3,8 +3,14 @@
 
 TEST(Test, Example1) {
     Solution sol;
+    int n = 19;
+    EXPECT_TRUE(sol.isHappy(n));
+}
 
-    EXPECT_EQ(4, sol.solution(2, 2));
+TEST(Test, Example2) {
+    Solution sol;
+    int n = 2;
+    EXPECT_FALSE(sol.isHappy(n));
 }
 
 int main() {
