@@ -3,9 +3,22 @@
 
 TEST(Test, Example1) {
     Solution sol;
-
-    EXPECT_EQ(4, sol.solution(2, 2));
+    std::string s = "()";
+    EXPECT_TRUE(sol.isValid(s));
 }
+
+TEST(Test, Example2) {
+    Solution sol;
+    std::string s = "()[]{}";
+    EXPECT_TRUE(sol.isValid(s));
+}
+
+TEST(Test, Example3) {
+    Solution sol;
+    std::string s = "(]";
+    EXPECT_FALSE(sol.isValid(s));
+}
+
 
 int main() {
     ::testing::InitGoogleTest();

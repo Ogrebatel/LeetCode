@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <stack>
+#include <string>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    bool isValid(std::string s);
 };
 
 
