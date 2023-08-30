@@ -1,10 +1,17 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
 
-class Solution {
+class MinStack {
  public:
-    static int solution(int a, int b);
+    MinStack() = default;
+    void push(int val);
+    void pop();
+    int top();
+    int getMin();
+private:
+    std::vector<std::pair<int, int>> _data;
 };
 
 
