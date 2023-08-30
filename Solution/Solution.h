@@ -1,10 +1,13 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
+#include <vector>
+#include <stack>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    int evalRPN(std::vector<std::string>& tokens);
 };
 
 
