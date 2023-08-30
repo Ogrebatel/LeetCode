@@ -1,9 +1,10 @@
 #include <gtest/gtest.h>
 #include "Solution.h"
 
-TEST(Test, test_for_test) {
+TEST(Test, Example1) {
     Solution sol;
 
+    std::vector<int>
     EXPECT_EQ(4, sol.solution(2, 2));
 }
 

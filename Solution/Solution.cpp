@@ -1,5 +1,5 @@
 #include "Solution.h"
 
-int Solution::solution(int a, int b) {
-    return a + b;
+int Solution::longestConsecutive(std::vector<int> &nums) {
+    return 0;
 }
