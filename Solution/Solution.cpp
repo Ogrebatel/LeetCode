@@ -1,11 +1,11 @@
 #include "Solution.h"
 
-ListNode *Solution::addTwoNumbers(ListNode *l1, ListNode *l2)  {
+ListNode *Solution::addTwoNumbers(ListNode *l1, ListNode *l2) {
 
     int overload = 0;
-    ListNode* result = new ListNode();
-    ListNode* iter = result;
-    while(l1 != nullptr || l2 != nullptr) {
+    ListNode *result = new ListNode();
+    ListNode *iter = result;
+    while (l1 != nullptr || l2 != nullptr) {
         if (l1 != nullptr) {
             iter->val += l1->val;
             l1 = l1->next;
@@ -18,7 +18,7 @@ ListNode *Solution::addTwoNumbers(ListNode *l1, ListNode *l2)  {
 
         iter->val += overload;
         if (iter->val > 9) {
-            iter->val /= 10;
+            iter->val %= 10;
             overload = 1;
         } else {
             overload = 0;
@@ -28,20 +28,17 @@ ListNode *Solution::addTwoNumbers(ListNode *l1, ListNode *l2)  {
         iter = iter->next;
     }
 
+    if (overload) {
+        iter->val = overload;
+        iter->next = new ListNode();
+    }
+
     iter = result;
     while (iter->next && iter->next->next) {
         iter = iter->next;
     }
 
-    iter = iter->next;
-
-    if (!iter->next) {
-        delete result->next;
-        result->next = nullptr;
-    } else {
-        delete iter->next;
-        iter->next = nullptr;
-    }
-
+    delete iter->next;
+    iter->next = nullptr;
     return result;
 }
