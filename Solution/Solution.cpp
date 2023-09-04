@@ -21,7 +21,7 @@ int Solution::getMinimumDifference(TreeNode *root) {
 
         return std::min(
                 std::min(min - root->val, root->val - max),
-                std::min(getMinimumDifference(root->left), getMinimumDifference(root->right));
+                std::min(getMinimumDifference(root->left), getMinimumDifference(root->right))
         );
 
     } else if (root->left) {
@@ -29,7 +29,7 @@ int Solution::getMinimumDifference(TreeNode *root) {
         return std::min(root->val - max, getMinimumDifference(root->left));
 
     } else if (root->right) {
-        int min = getMin(root->left);
+        int min = getMin(root->right);
         return std::min(min - root->val, getMinimumDifference(root->right));
 
     } else {
