@@ -17,7 +17,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    std::vector<std::vector<int>> levelOrder(TreeNode* root);
+    std::vector<std::vector<int>> zigzaglevelOrder(TreeNode* root);
 
 private:
     void levelOrder(TreeNode* node, int i, std::vector<std::vector<int>> *vec);
