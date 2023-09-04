@@ -1,9 +1,14 @@
 #include "Solution.h"
 
-BSTIterator::BSTIterator(TreeNode *root) : iter(root) {
-    while (iter) {
+BSTIterator::BSTIterator(TreeNode *root) : iter(root), last(root) {
+    while (iter != nullptr) {
         _nodes.push(iter);
+        lastVal = iter->val;
         iter = iter->left;
+    }
+
+    while (last->right) {
+        last = last->right;
     }
 }
 
@@ -15,11 +20,11 @@ int BSTIterator::next() {
 
     iter = _nodes.top();
     _nodes.pop();
-    int val = iter->val;
+    lastVal = iter->val;
     iter = iter->right;
-    return val;
+    return lastVal;
 }
 
 bool BSTIterator::hasNext() {
-    return false;
+    return !_nodes.empty() || lastVal != last->val;
 }

@@ -26,6 +26,8 @@ public:
 private:
     std::stack<TreeNode*> _nodes;
     TreeNode* iter;
+    TreeNode* last;
+    int lastVal;
 };
 
 
