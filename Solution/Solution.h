@@ -17,8 +17,10 @@ struct TreeNode {
 
 class Solution {
 public:
-    int kthSmallest(TreeNode *root, int k);
-    std::pair<bool, int> inorder(TreeNode *node, int* k);
+    bool isValidBST(TreeNode *root);
+    bool preorder(TreeNode *node);
+    int getLeft (TreeNode* node);
+    int getRight (TreeNode* node);
 };
 
 

@@ -1,21 +1,35 @@
 #include "Solution.h"
 
-int Solution::kthSmallest(TreeNode *root, int k) {
-    return inorder(root, &k).second;
+int Solution::getLeft (TreeNode* node) {
+    while (node->left) {
+        node = node->left;
+    }
+    return node->val;
 }
 
-std::pair<bool, int> Solution::inorder(TreeNode *node, int *k) {
+int Solution::getRight(TreeNode *node) {
+    while (node->right) {
+        node = node->right;
+    }
+    return node->val;
+}
+
+bool Solution::isValidBST(TreeNode* root) {
+    return preorder(root);
+}
+
+bool Solution::preorder(TreeNode *node) {
     if (!node) {
-        return {false, 0};
+        return true;
     }
 
-    auto result = inorder(node->left, k);
-    if (result.first) {
-        return result;
+    if (node->left && getRight(node->left) >= node->val) {
+        return false;
     }
-    --(*k);
-    if (*k == 0) {
-        return {true, node->val};
+
+    if (node->right && getLeft(node->right) <= node->val) {
+        return false;
     }
-    return inorder(node->right, k);
+
+    return preorder(node->left) && preorder(node->right);
 }

@@ -3,23 +3,18 @@
 
 TEST(Test, Example1) {
     Solution sol;
-    TreeNode node1(4);
-    TreeNode node2(2);
+    TreeNode node1(5);
+    TreeNode node2(4);
     TreeNode node3(6);
-    TreeNode node4(1);
-    TreeNode node5(3);
+    TreeNode node4(3);
+    TreeNode node5(7);
 
     node1.left = &node2;
     node1.right = &node3;
 
-    node2.left = &node4;
-    node2.right = &node5;
-    EXPECT_EQ(1, sol.kthSmallest(&node1, 1));
-    EXPECT_EQ(2, sol.kthSmallest(&node1, 2));
-    EXPECT_EQ(3, sol.kthSmallest(&node1, 3));
-    EXPECT_EQ(4, sol.kthSmallest(&node1, 4));
-    EXPECT_EQ(6, sol.kthSmallest(&node1, 5));
-
+    node3.left = &node4;
+    node3.right = &node5;
+    EXPECT_FALSE(sol.isValidBST(&node1));
 }
 
 int main() {
