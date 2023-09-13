@@ -3,8 +3,23 @@
 
 TEST(Test, Example1) {
     Solution sol;
+    std::string s = "abcabcbb";
 
-    EXPECT_EQ(4, sol.solution(2, 2));
+    EXPECT_EQ(3, sol.lengthOfLongestSubstring(s));
+}
+
+TEST(Test, Example2) {
+    Solution sol;
+    std::string s = "bbbbb";
+
+    EXPECT_EQ(1, sol.lengthOfLongestSubstring(s));
+}
+
+TEST(Test, Example3) {
+    Solution sol;
+    std::string s = "pwwkew";
+
+    EXPECT_EQ(3, sol.lengthOfLongestSubstring(s));
 }
 
 int main() {
