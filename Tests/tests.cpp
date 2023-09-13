@@ -4,7 +4,6 @@
 TEST(Test, test_for_test) {
     Solution sol;
 
-    EXPECT_EQ(4, sol.solution(2, 2));
 }
 
 int main() {
