@@ -1,10 +1,11 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    std::string addBinary(std::string a, std::string b);
 };
 
 
