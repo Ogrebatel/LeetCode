@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <cinttypes>
+#include <bitset>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    int hammingWeight(uint32_t n);
 };
 
 

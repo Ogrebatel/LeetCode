@@ -4,7 +4,13 @@
 TEST(Test, Example1) {
     Solution sol;
 
-    EXPECT_EQ(4, sol.solution(2, 2));
+    EXPECT_EQ(3, sol.hammingWeight(11));
+}
+
+TEST(Test, Example2) {
+    Solution sol;
+
+    EXPECT_EQ(1, sol.hammingWeight(128));
 }
 
 int main() {
