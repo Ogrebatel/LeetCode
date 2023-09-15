@@ -1,10 +1,11 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <inttypes.h>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    uint32_t reverseBits(uint32_t n);
 };
 
 
