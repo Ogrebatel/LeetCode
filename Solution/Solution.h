@@ -1,10 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <algorithm>
+#include <cmath>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    int rangeBitwiseAnd(int left, int right);
 };
 
 
