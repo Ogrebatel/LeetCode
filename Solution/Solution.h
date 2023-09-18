@@ -1,10 +1,18 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <string>
+#include <vector>
+
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    Solution();
+
+    std::string intToRoman(int num);
+
+private:
+    const std::vector<std::pair<int, std::string>> _intToRoman;
 };
 
 
