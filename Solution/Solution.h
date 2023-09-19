@@ -1,10 +1,13 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    bool searchMatrix(std::vector<std::vector<int>>& matrix, int target);
+ private:
+    int getElement (std::vector<std::vector<int>> &matrix, int forwardIdx);
 };
 
 
