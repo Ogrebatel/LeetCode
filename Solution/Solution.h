@@ -1,10 +1,18 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <vector>
 
 class Solution {
  public:
-    static int solution(int a, int b);
+    int searchInsert(std::vector<int> &nums, int target);
+
+ private:
+    int getCenterInd(int left, int right);
+    int binarySearch(std::vector<int> &nums, int target);
+
+    bool nextIsBigger(const std::vector<int> &nums, int ind);
+    bool prevIsBigger(const std::vector<int> &nums, int ind);
 };
 
 
