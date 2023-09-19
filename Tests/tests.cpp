@@ -1,6 +1,15 @@
 #include <gtest/gtest.h>
 #include "Solution.h"
 
+TEST(Test, Example4) {
+    Solution sol;
+    std::vector<int> nums = {1,3};
+    int expected = 1;
+    int result = sol.searchInsert(nums, 2);
+
+    EXPECT_EQ(expected, result);
+}
+
 TEST(Test, Example2) {
     Solution sol;
     std::vector<int> nums = {1,3,5,6};
@@ -29,6 +38,8 @@ TEST(Test, Example3) {
 
     EXPECT_EQ(expected, result);
 }
+
+
 
 int main() {
     ::testing::InitGoogleTest();

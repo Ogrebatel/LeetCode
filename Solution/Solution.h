@@ -10,9 +10,6 @@ class Solution {
  private:
     int getCenterInd(int left, int right);
     int binarySearch(std::vector<int> &nums, int target);
-
-    bool nextIsBigger(const std::vector<int> &nums, int ind);
-    bool prevIsBigger(const std::vector<int> &nums, int ind);
 };
 
 
