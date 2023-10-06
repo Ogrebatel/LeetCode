@@ -1,19 +1,46 @@
 #include "Solution.h"
 
-int Solution::rob(std::vector<int> &nums) {
-    if (nums.size() == 1) {
-        return nums[0];
+std::vector<int> Solution::spiralOrder(std::vector<std::vector<int>> &matrix) {
+    if (matrix.empty()) {
+        throw std::out_of_range("ERR: bad input.");
     }
-    if (nums.size() == 2) {
-        return std::max(nums[0], nums[1]);
+    if (matrix[0].empty()) {
+        throw std::out_of_range("ERR: bad input.");
+    }
+    int tmpSize = matrix[0].size();
+
+    for (const auto &item: matrix) {
+        if (item.size() != tmpSize) {
+            throw std::out_of_range("ERR: bad input.");
+        }
     }
 
-    std::vector<int> maxRob(nums.size());
-    maxRob[0] = nums[0];
-    maxRob[1] = std::max(nums[0], nums[1]);
+    std::vector<int> result;
+    int upperBound = 0, lowerBound = matrix.size() - 1;
+    int leftBound = 0, rightBound = matrix[0].size() - 1;
 
-    for (int i = 2; i < nums.size(); ++i) {
-        maxRob[i] = std::max(maxRob[i - 2] + nums[i], maxRob[i - 1]);
+    while (lowerBound >= upperBound || rightBound >= leftBound) {
+        for (int i = leftBound; i <= rightBound; ++i) {
+            result.push_back(matrix[upperBound][i]);
+        }
+        upperBound++;
+
+        for (int i = upperBound; i <= lowerBound; ++i) {
+            result.push_back(matrix[i][rightBound]);
+        }
+        rightBound--;
+
+        for (int i = rightBound; i >= leftBound; --i) {
+            result.push_back(matrix[lowerBound][i]);
+        }
+        lowerBound--;
+
+        for (int i = lowerBound; i <= upperBound; --i) {
+            result.push_back(matrix[i][leftBound]);
+        }
+        leftBound++;
+
     }
-    return maxRob[maxRob.size() - 1];
+
+    return result;
 }

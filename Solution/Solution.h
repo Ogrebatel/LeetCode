@@ -1,11 +1,12 @@
 #ifndef LEETCODE_SOLUTION_H
 #define LEETCODE_SOLUTION_H
 
+#include <stdexcept>
 #include <vector>
 
 class Solution {
  public:
-    int rob(std::vector<int>& nums);
+    std::vector<int> spiralOrder(std::vector<std::vector<int>>& matrix);
 };
 
 
