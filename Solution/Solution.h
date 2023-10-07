@@ -5,7 +5,7 @@
 
 class Solution {
  public:
-    int rob(std::vector<int>& nums);
+    void setZeroes(std::vector<std::vector<int>>& matrix);
 };
 
 
